@@ -1,15 +1,21 @@
 <!DOCTYPE html>
 <html>
 <body>
-<script src="anime.min.js"></script>
+<script src="path/to/anime.min.js"></script>
+
 <h1>My First Heading</h1>
-anime({
-  targets: 'div',
-  translateX: 250,
-  rotate: '1turn',
-  backgroundColor: '#FFF',
-  duration: 800
-});  
-<p>My first paragraph.</p>
+
+<p>My first paragraph.
+  let animation = anime({
+  targets: '.segment',
+  width: 20,
+  duration: 300,
+  delay: function(el, i, l) {
+    return i * 500;
+  },
+  endDelay: 500,
+  easing: 'linear',
+  loop: true
+});  </p>
 </body>
 </html>
